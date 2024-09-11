@@ -109,7 +109,7 @@ We welcome contributions to enhance this project! If you have suggestions, bug r
 
 ## 📞 **Contact**
 
-For any queries or suggestions, feel free to reach out via email: [your-email@example.com](mailto:yaranathakur@gmail.com).
+For any queries or suggestions, feel free to reach out via email: [yaranathakur@gmail.com](mailto:yaranathakur@gmail.com).
 
 ---
 
