@@ -88,7 +88,7 @@ with st.container():
             )
 
 
-st.text("Size : Primary Parameter & Color: Secondary Parameter")
+st.text(f"Size : {primary} & Color: {secondary}")
 if selected_state == "Overall India":
     fig = px.scatter_mapbox(
         df,
