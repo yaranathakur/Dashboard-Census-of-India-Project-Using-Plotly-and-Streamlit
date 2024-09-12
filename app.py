@@ -10,7 +10,7 @@ df = pd.read_csv("indiaDetailed.csv")
 
 
 states = list(df["State"].unique())
-states.insert(0, "Overall India")
+states.insert(0, "India")
 st.sidebar.title("India Data Visualization")
 selected_state = st.sidebar.selectbox("Select a State", states)
 
@@ -39,7 +39,7 @@ st.markdown(
 with st.container():
     col1, col2, col3, col4 = st.columns(4)
     with col1:
-        if selected_state == "Overall India":
+        if selected_state == "India":
             st.metric(
                 label="Population",
                 value=millify.millify(df["Population"].sum(), precision=2),
@@ -52,7 +52,7 @@ with st.container():
                 ),
             )
     with col2:
-        if selected_state == "Overall India":
+        if selected_state == "India":
             st.metric(
                 label="Sex Ratio",
                 value=int(df["Sex Ratio"].mean()),
@@ -63,7 +63,7 @@ with st.container():
                 value=int(df[df["State"] == selected_state]["Sex Ratio"].mean()),
             )
     with col3:
-        if selected_state == "Overall India":
+        if selected_state == "India":
             st.metric(
                 label="Literacy Rate",
                 value=int(df["Literacy Rate"].mean()),
@@ -74,7 +74,7 @@ with st.container():
                 value=int(df[df["State"] == selected_state]["Literacy Rate"].mean()),
             )
     with col4:
-        if selected_state == "Overall India":
+        if selected_state == "India":
             st.metric(
                 label="Households",
                 value=millify.millify(df["Households"].sum(), precision=2),
@@ -89,7 +89,7 @@ with st.container():
 
 
 st.text(f"Size : {primary} & Color: {secondary}")
-if selected_state == "Overall India":
+if selected_state == "India":
     fig = px.scatter_mapbox(
         df,
         lat="Latitude",
