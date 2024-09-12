@@ -4,7 +4,17 @@ import streamlit as st
 import plotly.express as px
 import millify
 
-st.set_page_config(layout="wide", page_title="Census of India 2011")
+st.set_page_config(
+    layout="wide",
+    page_title="Census of India 2011",
+    page_icon="🧊",
+    initial_sidebar_state="expanded",
+    menu_items={
+        "Get Help": "https://www.extremelycoolapp.com/help",
+        "Report a bug": "https://www.extremelycoolapp.com/bug",
+        "About": "# This is a header. This is an *extremely* cool app!",
+    },
+)
 
 df = pd.read_csv("indiaDetailed.csv")
 
